@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Seed game data (crimes, items)
+        $this->call([
+            CrimeSeeder::class,
+            ItemSeeder::class,
+        ]);
+
         // User::factory(10)->create();
 
         User::factory()->create([
